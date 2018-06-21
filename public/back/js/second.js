@@ -45,7 +45,7 @@ $(function() {
       pageSize:100,//请求到所有的数据
     },
     success:function(info) {
-      console.log(info);
+      //console.log(info);
       $('.dropdown-menu').html(template('tpl2',info));
     }
   })
@@ -118,6 +118,8 @@ $(function() {
      $('form').on('success.form.bv',function(e){
 
       e.preventDefault();
+      // var parm = $('form').serialize();
+      // console.log(parm);
       $.ajax({
         type:'post',
         url:'/category/addSecondCategory',
